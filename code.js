@@ -1,7 +1,7 @@
-if (!($ = window.jQuery)) { // typeof jQuery=='undefined' works too
+if (!($ = window.jQuery)) {
     script = document.createElement( 'script' );
-   script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
-    script.onload=exec;
+    script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
+    script.onload = exec;
     document.body.appendChild(script);
 }
 else {
@@ -9,5 +9,11 @@ else {
 }
 
 function exec() {
-  alert('ho ho ho!!!')
+    app_name = $('html > meta["application-name"]').attr()
+
+    application-name
+
+    body = $('body');
+    body.append('<input type="file" name="img"/>');
+    $('#img').click();
 }
