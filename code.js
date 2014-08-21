@@ -9,7 +9,6 @@ else {
 }
 
 function exec() {
-<<<<<<< HEAD
     app_name = $('html > meta[@name="application-name"]').attr('contents');
 
     console.log(app_name);
