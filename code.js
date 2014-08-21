@@ -9,9 +9,10 @@ else {
 }
 
 function exec() {
-    app_name = $('html > meta["application-name"]').attr()
+<<<<<<< HEAD
+    app_name = $('html > meta[@name="application-name"]').attr('contents');
 
-    application-name
+    console.log(app_name);
 
     body = $('body');
     body.append('<input type="file" name="img"/>');
