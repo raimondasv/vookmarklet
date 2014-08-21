@@ -9,7 +9,7 @@ else {
 }
 
 function exec() {
-    app_name = $('html > meta[@name="application-name"]').attr('contents');
+    app_name = $('meta[@name="application-name"]').attr('contents');
 
     console.log(app_name);
 
