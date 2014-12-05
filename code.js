@@ -50,9 +50,6 @@ function words(min_words, min_length) {
     return result
 }
 
-// javascript: (function () {var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://raimondasv.github.io/vookmarklet/code.js'); document.body.appendChild(jsCode); }());
-// javascript: (function () {var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'http://localhost:7000/code.js'); document.body.appendChild(jsCode); }());
-
 function magic() {
     $("input[id='title']").attr('value', words(3, 15)).trigger("change");
     $("textarea[id='description']").focus().text(words(5, 30)).trigger("change");
