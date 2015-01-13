@@ -43,7 +43,7 @@ function rnd_word() {
 
 function words(min_words, min_length) {
     result = rnd_word();
-    while (min_words > 0 && result.length <= min_length) {
+    while (min_words >= 0 && result.length <= min_length) {
         min_words--;
         result += " " + rnd_word();
     }
