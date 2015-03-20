@@ -43,7 +43,7 @@ function rnd_word() {
 
 function words(min_words, min_length) {
     result = rnd_word();
-    while (min_words > 0 && result.length <= min_length) {
+    while (min_words >= 0 && result.length <= min_length) {
         min_words--;
         result += " " + rnd_word();
     }
@@ -51,12 +51,16 @@ function words(min_words, min_length) {
 }
 
 function magic() {
-    $("input[id='title']").attr('value', words(3, 15)).trigger("change");
-    $("textarea[id='description']").focus().text(words(5, 30)).trigger("change");
+    $("input[id='title']").attr('value', words(4, 20)).trigger("change");
+    $("textarea[id='description']").focus().text(words(6, 40)).trigger("change");
 
     $('.category-selection .selection-box-item').eq(0).click();
     $('.sizes-selection .selection-box-item').eq(0).click();
     $('.colors-selection .selection-box-item').eq(2).click();
+
+    $('.js-acquiring-time-select').click();
+    $('.js-acquiring-place-select').click();
+    $('.js-status-select').click();
 
     $("input[id='price']").click(function() {
         $("input[id='real_value']").attr('value', rnd(20, 30)).trigger('change');
