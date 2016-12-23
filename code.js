@@ -69,9 +69,9 @@ function magic() {
 
     $('.js-category-selector .options-list__content')._rnd().click();
     setTimeout(function() {
-        $('.js-subcategory-selector .nav-item')._rnd().click();
+        $('.js-subcategory-select .nav-item').eq(0)._rnd().click();
         setTimeout(function() {
-            $('.js-subcategory-selector .nav-item')._rnd().click();
+            $('.js-subcategory-select .nav-item').eq(1)._rnd().click();
         }, 500);
     }, 500);
 
