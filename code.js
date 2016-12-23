@@ -72,12 +72,12 @@ function magic() {
         $('.js-subcategory-selector .nav-item')._rnd().click();
     }, 500);
 
-    $('.sizes-selection .selection-box-item').eq(0).click();
-    $('.colors-selection .selection-box-item').eq(2).click();
+    $('.js-upload-sizes .options-list__item')._rnd().click();
+    $('.js-color-selector .options-list__item')._rnd().click();
 
     $('.js-acquiring-time-select').click();
     $('.js-acquiring-place-select').click();
-    $('.js-status-select').click();
+    $('.js-status .nav-item')._rnd().click();
 
     $("input[id='price']").click(function() {
         $("input[id='real_value']").attr('value', rnd(20, 30)).trigger('change');
