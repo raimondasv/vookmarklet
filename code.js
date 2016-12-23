@@ -70,6 +70,9 @@ function magic() {
     $('.js-category-selector .options-list__content')._rnd().click();
     setTimeout(function() {
         $('.js-subcategory-selector .nav-item')._rnd().click();
+        setTimeout(function() {
+            $('.js-subcategory-selector .nav-item')._rnd().click();
+        }, 500);
     }, 500);
 
     $('.js-upload-sizes .options-list__item')._rnd().click();
