@@ -32,6 +32,17 @@ if (!($ = window.jQuery)) {
 else {
     magic();
 }
+function bootstrap_jquery() {
+    $.fn._rnd = function()
+    {
+        var ret = $();
+
+        if(this.length > 0)
+            ret = ret.add(this[Math.floor((Math.random() * this.length))]);
+
+        return ret;
+    };
+}
 
 function rnd(from, to) {
     return to + Math.floor(Math.random() * (from-to + 1));
@@ -50,11 +61,17 @@ function words(min_words, min_length) {
     return result
 }
 
+
 function magic() {
+    bootstrap_jquery();
     $("input[id='title']").attr('value', words(4, 20)).trigger("change");
     $("textarea[id='description']").focus().text(words(6, 40)).trigger("change");
 
-    $('.category-selection .selection-box-item').eq(0).click();
+    $('.js-category-selector .options-list__content')._rnd().click();
+    setTimeout(function() {
+        $('.js-subcategory-selector .nav-item')._rnd().click();
+    }, 500);
+
     $('.sizes-selection .selection-box-item').eq(0).click();
     $('.colors-selection .selection-box-item').eq(2).click();
 
